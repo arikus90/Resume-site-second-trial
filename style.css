@@ -1,0 +1,155 @@
+.body {
+    background-color:yellow;
+}
+.container {                     
+    background-color: lightyellow;
+}
+
+.photo1{
+    border-radius:50%;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.summary {
+ 
+}
+.about {
+align-content:center;
+align-items:center;
+}
+
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+}
+
+.grid-container {
+    max-width: 940px;
+    margin: 0 0px;
+    display: grid;
+    grid-gap: 0px;
+}
+
+
+/* no grid support? */
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.grid-container {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(auto);
+}
+
+.panel {
+    /* needed for the flex layout*/
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: auto;
+    background-color: azure;
+}
+
+.header {
+    grid-column: 1 / -1;
+    height: auto;
+    background-color: azure;
+}
+
+.grid-container > * {
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    margin-bottom: 10px;
+    height:auto
+}
+.header > * {
+    align-items:center;
+    
+}
+
+
+/* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+
+@supports (display: grid) {
+    .grid-container > * {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    background-color: azure;
+    color: #444;
+    grid-column: 1/-1;
+    padding: 10;
+}
+
+.box {
+    background-color: azure;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 150%;
+}
+
+    .box .box {
+        background-color: azure;
+        color: #444;
+    }
+
+.a {
+    grid-column: col1 / span 2;
+    grid-row: row;
+}
+
+.c {
+    grid-column: col / span 2;
+    grid-row: row 2;
+    margin-bottom: 10px;
+}
+
+
+.f {
+    grid-row: 1/span 2;
+    grid-column: 4/span 2;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-left: dotted;
+}
+
+.g {
+    grid-row: row 2;
+    grid-column: span 2;
+    font-size: 140%;
+    margin-right: 10px;
+    margin-bottom:10px;
+    border-left:dotted;
+}
+
+.e {
+    grid-row: 4/span 2;
+    grid-column: 4/span 2;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-left: dotted;
+}
